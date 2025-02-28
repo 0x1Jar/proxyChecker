@@ -43,14 +43,32 @@ Supported proxy formats:
 - `http://ip:port` (e.g., http://172.64.151.116:80)
 - `ip:port` (e.g., 172.64.151.116:80)
 
-### SOCKS5 Proxy Checker
 
-```bash
-python socks5.py <proxy_file>
-```
 
 Supported proxy format:
 - `ip:port` (e.g., 172.64.151.116:1080)
+
+### Using the Main Interface
+
+```bash
+python main.py
+```
+
+The main interface provides an interactive menu to check both HTTP and SOCKS5 proxies:
+
+1. Choose proxy type:
+   - Option 1: HTTP/HTTPS Proxies
+   - Option 2: SOCKS5 Proxies
+   - Option 3: Exit
+
+2. Enter the path to your proxy file when prompted
+
+The tool will then:
+- Check all proxies in the file
+- Show real-time progress
+- Display results for each proxy
+- Save working proxies to the appropriate output file
+- Provide a summary of results
 
 ### Input File Formats
 

@@ -156,6 +156,7 @@ def read_proxies_from_file(filename):
     return proxies
 
 def main():
+
     # Check if filename was provided
     if len(sys.argv) != 2:
         print("Usage: python http_proxy_checker.py <proxy_file>")
