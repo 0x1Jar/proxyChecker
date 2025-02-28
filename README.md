@@ -111,17 +111,3 @@ Feel free to submit issues, fork the repository, and create pull requests for an
 This project is licensed under the MIT License - see the LICENSE file for details.
 ```
 
-This README.md provides:
-1. A clear overview of your tools
-2. Installation instructions
-3. Usage examples
-4. Detailed feature explanations
-5. Information about supported formats
-6. Contributing guidelines
-
-You may want to customize:
-1. The repository URL in the installation section
-2. Add any specific requirements or limitations
-3. Add any additional features you plan to implement
-4. Modify the license section according to your preferences
-5. Add any troubleshooting guides if needed
