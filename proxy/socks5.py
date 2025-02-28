@@ -16,9 +16,9 @@ def check_proxy(proxy_str):
             ip, port = proxy_str.strip().split(':')
             port = int(port)
         else:
-            return f"{proxy_str} - Invalid format. Expected ip:port"
+            return f"{proxy_str} - Invalid format. Expected ip:port", False, 0
     except ValueError:
-        return f"{proxy_str} - Invalid format. Expected ip:port"
+        return f"{proxy_str} - Invalid format. Expected ip:port", False, 0
     
     # Create a socket and set it to use the proxy
     s = socks.socksocket()
@@ -67,7 +67,19 @@ def read_proxies_from_file(filename):
     return proxies
 
 def main():
-    
+    # ASCII Art Banner
+    banner = """
+███████╗ ██████╗  ██████╗██╗  ██╗███████╗    ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗   ██╗
+██╔════╝██╔═══██╗██╔════╝██║ ██╔╝██╔════╝    ██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝╚██╗ ██╔╝
+███████╗██║   ██║██║     █████╔╝ ███████╗    ██████╔╝██████╔╝██║   ██║ ╚███╔╝  ╚████╔╝ 
+╚════██║██║   ██║██║     ██╔═██╗ ╚════██║    ██╔═══╝ ██╔══██╗██║   ██║ ██╔██╗   ╚██╔╝  
+███████║╚██████╔╝╚██████╗██║  ██╗███████║    ██║     ██║  ██║╚██████╔╝██╔╝ ██╗   ██║   
+╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+
+                                    by 0x1Jar
+    """
+    print(banner)
+
     # Check if filename was provided
     if len(sys.argv) != 2:
         print("Usage: python socks5_checker.py <proxy_file>")
@@ -128,4 +140,4 @@ def main():
     print(f"Active proxies have been saved to: {output_file}")
 
 if __name__ == "__main__":
-    main()
+    main() 

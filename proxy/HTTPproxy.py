@@ -156,6 +156,18 @@ def read_proxies_from_file(filename):
     return proxies
 
 def main():
+    # ASCII Art Banner
+    banner = """
+██╗  ██╗████████╗████████╗██████╗     ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗   ██╗
+██║  ██║╚══██╔══╝╚══██╔══╝██╔══██╗    ██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝╚██╗ ██╔╝
+███████║   ██║      ██║   ██████╔╝    ██████╔╝██████╔╝██║   ██║ ╚███╔╝  ╚████╔╝ 
+██╔══██║   ██║      ██║   ██╔═══╝     ██╔═══╝ ██╔══██╗██║   ██║ ██╔██╗   ╚██╔╝  
+██║  ██║   ██║      ██║   ██║         ██║     ██║  ██║╚██████╔╝██╔╝ ██╗   ██║   
+╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝         ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+
+                                    by 0x1Jar
+    """
+    print(banner)
 
     # Check if filename was provided
     if len(sys.argv) != 2:
@@ -218,4 +230,4 @@ def main():
     print(f"Active proxies have been saved to: {output_file}")
 
 if __name__ == "__main__":
-    main()
+    main() 
