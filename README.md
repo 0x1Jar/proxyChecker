@@ -1,5 +1,16 @@
 # Proxy Checker Tools
 
+```
+██████╗ ██████╗  ██████╗ ██╗  ██╗██╗   ██╗     ██████╗██╗  ██╗███████╗ ██████╗██╗  ██╗███████╗██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝╚██╗ ██╔╝    ██╔════╝██║  ██║██╔════╝██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+██████╔╝██████╔╝██║   ██║ ╚███╔╝  ╚████╔╝     ██║     ███████║█████╗  ██║     █████╔╝ █████╗  ██████╔╝
+██╔═══╝ ██╔══██╗██║   ██║ ██╔██╗   ╚██╔╝      ██║     ██╔══██║██╔══╝  ██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+██║     ██║  ██║╚██████╔╝██╔╝ ██╗   ██║       ╚██████╗██║  ██║███████╗╚██████╗██║  ██╗███████╗██║  ██║
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+                                            
+                                        By 0x1Jar
+```
+
 A collection of Python scripts for checking and validating HTTP and SOCKS5 proxies.
 
 ## Features
@@ -33,42 +44,57 @@ pip install -r requirements.txt
 
 ## Usage
 
-### HTTP Proxy Checker
+There are two ways to use this tool:
 
-```bash
-python HTTPproxy.py <proxy_file>
-```
-
-Supported proxy formats:
-- `http://ip:port` (e.g., http://172.64.151.116:80)
-- `ip:port` (e.g., 172.64.151.116:80)
-
-
-
-Supported proxy format:
-- `ip:port` (e.g., 172.64.151.116:1080)
-
-### Using the Main Interface
+### 1. Using the Main Interface (Recommended)
 
 ```bash
 python main.py
 ```
 
-The main interface provides an interactive menu to check both HTTP and SOCKS5 proxies:
-
+This provides an interactive menu where you can:
 1. Choose proxy type:
    - Option 1: HTTP/HTTPS Proxies
    - Option 2: SOCKS5 Proxies
    - Option 3: Exit
-
 2. Enter the path to your proxy file when prompted
 
-The tool will then:
-- Check all proxies in the file
-- Show real-time progress
-- Display results for each proxy
-- Save working proxies to the appropriate output file
-- Provide a summary of results
+### 2. Using Individual Scripts
+
+#### For HTTP/HTTPS Proxies:
+```
+██╗  ██╗████████╗████████╗██████╗     ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗   ██╗
+██║  ██║╚══██╔══╝╚══██╔══╝██╔══██╗    ██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝╚██╗ ██╔╝
+███████║   ██║      ██║   ██████╔╝    ██████╔╝██████╔╝██║   ██║ ╚███╔╝  ╚████╔╝ 
+██╔══██║   ██║      ██║   ██╔═══╝     ██╔═══╝ ██╔══██╗██║   ██║ ██╔██╗   ╚██╔╝  
+██║  ██║   ██║      ██║   ██║         ██║     ██║  ██║╚██████╔╝██╔╝ ██╗   ██║   
+╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝         ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+```
+
+```bash
+python HTTPproxy.py <proxy_file>
+```
+
+Supported formats:
+- `http://ip:port` (e.g., http://172.64.151.116:80)
+- `ip:port` (e.g., 172.64.151.116:80)
+
+#### For SOCKS5 Proxies:
+```
+███████╗ ██████╗  ██████╗██╗  ██╗███████╗    ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗   ██╗
+██╔════╝██╔═══██╗██╔════╝██║ ██╔╝██╔════╝    ██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝╚██╗ ██╔╝
+███████╗██║   ██║██║     █████╔╝ ███████╗    ██████╔╝██████╔╝██║   ██║ ╚███╔╝  ╚████╔╝ 
+╚════██║██║   ██║██║     ██╔═██╗ ╚════██║    ██╔═══╝ ██╔══██╗██║   ██║ ██╔██╗   ╚██╔╝  
+███████║╚██████╔╝╚██████╗██║  ██╗███████║    ██║     ██║  ██║╚██████╔╝██╔╝ ██╗   ██║   
+╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+```
+
+```bash
+python socks5.py <proxy_file>
+```
+
+Supported format:
+- `ip:port` (e.g., 172.64.151.116:1080)
 
 ### Input File Formats
 
